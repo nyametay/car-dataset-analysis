@@ -1,79 +1,61 @@
-🚗 Car Dataset Analysis
+# 🚗 Car Dataset Analysis
+
 This repository contains a Jupyter Notebook that performs data cleaning, exploration, and filtering operations on a car dataset. The project demonstrates how to process real-world tabular data using Python and pandas.
 
-📓 Notebook Overview
-Car Notebook.ipynb includes:
+---
 
-Loading a CSV file of car specifications
+## 📓 Notebook Overview
 
-Identifying and handling missing values
+**`Car Notebook.ipynb`** includes:
+- Loading a CSV file of car specifications
+- Identifying and handling missing values
+- Value count analysis for categorical columns
+- Filtering data based on specific conditions
+- Creating new derived columns
 
-Value count analysis for categorical columns
+---
 
-Filtering data based on specific conditions
+## 🧾 Dataset Description
 
-Creating new derived columns
-
-🧾 Dataset Description
 The dataset contains specifications of various cars including:
+- **Make** (car brand)
+- **Cylinders**
+- **Weight**
+- **MPG_City**
+- **Origin** (e.g., Asia, Europe)
 
-Make (car brand)
+> **Note:** The dataset file used is `Project+2+-+Cars+Dataset.csv`  
+> Make sure it is located in the `../Datasets/` directory or update the path in the notebook.
 
-Cylinders
+---
 
-Weight
+## 🧹 Data Cleaning Steps
 
-MPG_City
+- Checked for and handled null values
+- Replaced missing values in the `Cylinders` column with the mean
+- Dropped completely empty rows
 
-Origin (e.g., Asia, Europe)
+---
 
-Dataset used: Project+2+-+Cars+Dataset.csv (must be placed in the ../Datasets/ directory or update the path accordingly)
+## 📊 Analysis Performed
 
-🧹 Data Cleaning Steps
-Checked for and handled null values
+1. **Value Counts**  
+   Counted the occurrences of each car make using `.value_counts()`.
 
-Replaced missing values in the Cylinders column with the mean
+2. **Filtering**  
+   Displayed only cars originating from **Asia** or **Europe**.
 
-Dropped completely empty rows
+3. **Conditional Removal**  
+   Removed all cars with a weight over 4000.
 
-📊 Analysis Performed
-Value Counts
-Counted the occurrences of each car make using .value_counts().
+4. **Column Transformation**  
+   Created a new column `MPG_City_` with values = `MPG_City + 3`.
 
-Filtering
-Displayed only cars originating from Asia or Europe.
+---
 
-Conditional Removal
-Removed all cars with a weight over 4000.
+## 🛠️ Requirements
 
-Column Transformation
-Created a new column MPG_City_ with all values increased by 3 from MPG_City.
+Install necessary dependencies:
 
-🛠️ Requirements
-Install necessary dependencies using:
-
-bash
-Copy
-Edit
+```bash
 pip install pandas
-Or if you're using Jupyter:
-
-bash
-Copy
-Edit
-pip install notebook pandas
-🚀 Running the Notebook
-Clone the repository:
-
-bash
-Copy
-Edit
-git clone https://github.com/your-username/car-dataset-analysis.git
-cd car-dataset-analysis
-Start Jupyter Notebook:
-
-bash
-Copy
-Edit
-jupyter notebook
-Open Car Notebook.ipynb and run the cells to explore and analyze the dataset.
