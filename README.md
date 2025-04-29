@@ -64,7 +64,7 @@ pip install pandas
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/car-dataset-analysis.git
+git clone https://github.com/nyametay/car-dataset-analysis.git
 cd car-dataset-analysis
 ```
 2. Launch Jupyter Notebook:
